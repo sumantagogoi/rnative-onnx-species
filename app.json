@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "react-native-species-rec",
-    "slug": "react-native-species-rec",
+    "slug": "speceis-reco",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,6 +16,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.speciesrec.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +26,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e34a2e61-324e-4a2d-b856-b9e2abb351a9"
+      }
+    },
+    "owner": "xynocasts-organization",
+    "plugins": [
+      "expo-asset"
+    ]
   }
 }
