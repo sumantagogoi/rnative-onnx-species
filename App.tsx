@@ -36,9 +36,17 @@ export default function App() {
 
       // Load ONNX Session
       const modelAssetInfo = await Asset.loadAsync(modelAsset);
-      const modelUri = modelAssetInfo[0].localUri || modelAssetInfo[0].uri;
+      const uri = modelAssetInfo[0].localUri || modelAssetInfo[0].uri;
       
-      const newSession = await InferenceSession.create(modelUri, {
+      // @ts-ignore - property exists at runtime
+      const modelPath = FileSystem.documentDirectory + 'speciesnet_quantized.onnx';
+      if (uri.startsWith('http')) {
+        await FileSystem.downloadAsync(uri, modelPath);
+      } else {
+        await FileSystem.copyAsync({ from: uri, to: modelPath });
+      }
+
+      const newSession = await InferenceSession.create(modelPath, {
         executionProviders: ['cpu'], 
       });
       setSession(newSession);
