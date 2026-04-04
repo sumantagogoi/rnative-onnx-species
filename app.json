@@ -34,7 +34,8 @@
     },
     "owner": "xynocasts-organization",
     "plugins": [
-      "expo-asset"
+      "expo-asset",
+      "onnxruntime-react-native"
     ]
   }
 }
