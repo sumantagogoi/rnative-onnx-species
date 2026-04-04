@@ -12,6 +12,7 @@
     "buffer": "^6.0.3",
     "expo": "~54.0.33",
     "expo-asset": "~12.0.12",
+    "expo-dev-client": "^55.0.22",
     "expo-file-system": "~19.0.21",
     "expo-image-manipulator": "~14.0.8",
     "expo-image-picker": "~17.0.10",
